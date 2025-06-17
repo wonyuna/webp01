@@ -1,0 +1,395 @@
+
+@charset "utf-8";
+html {
+  scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+   
+    transition: background 0.3s ease;
+  
+    
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    
+  }
+  .main-title{
+    font-size: 4.5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+  }
+  
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg);
+    z-index: 999;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /*  box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    /* font-family: 'Playfair Display', serif; */
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .navbar .logo img{
+    width:180px;
+    height:80px;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin-left: 600px;
+  
+  }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    /* color: #fbae95; */
+    color: #ff3842;
+  }
+  
+  .page-section {
+    width: 100%;
+    height: 80vh;
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+  }
+  
+  #home {
+    background: radial-gradient(circle at center, rgba(255, 107, 66, 0.4), transparent 60%);
+    background-color: #f2f2f2; /* 기본 배경색 */
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .home-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .home-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  .home-content p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .about-content,
+  .process-content,
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .about-content h1,
+  .process-content h1,
+  .contact-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .profile-info h2{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+   ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .process-content li {
+    margin-bottom: 10px;
+  }
+  .process-content{
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .contact-content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .contact-content ul li {
+    margin-bottom: 10px;
+  }
+ 
+  
+  /* .footer{ */
+  /*   text-align: center;
+    height: 100px;
+    position: relative;
+    background-color: #fdfdfd;
+    color: #000000;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); */
+   
+/*       background: linear-gradient(to top, #111 0%, rgba(17, 17, 17, 0) 20%);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+   
+    
+  
+  } */
+   
+  .footer {
+    background: #f2f2f2; /* 기본 배경색 */
+    position: relative;
+    color: #000000;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -40px; /* 그라데이션 높이 */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #111 100%);
+    z-index: -1;
+  }
+  
+ /*  #about, */
+  #process{
+    background: linear-gradient( to bottom, rgba(255, 107, 66, 0.4), transparent 60%);
+    /* background-color: #f2f2f2; */
+    background-color: #fadacf;
+    height:100vh;
+  }  
+  #about{
+
+    
+    background-color: #f8cabb;
+    height:100vh;
+  }
+  #contact{
+    background: radial-gradient(circle at center, rgba(255, 107, 66, 0.4), transparent 60%);
+    background-color: #f2f2f2; /* 기본 배경색 */
+    text-align: center;
+    height: 100vh;
+  }
+ 
+     /* 아코디언 스타일 */
+     .accordion-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    
+    .accordion-title {
+      font-weight: bold;
+      cursor: default;
+    }
+    
+    .accordion-content {
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.4s ease;
+      height: auto;
+      display: block;
+    }
+    
+    .accordion-item:hover .accordion-content {
+      transform: scaleY(1);
+    }
+    
+    
+
+/* 추가적인 여백 및 스타일 조정 */
+.process-content ol li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-content ul li {
+  font-size: 16px;
+}
+.process-content h2{
+  font-family: 'Noto Sans KR', sans-serif;
+   
+}
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  border-radius: 8px;
+  margin-bottom: -30px;
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info1 h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.profile-info1 p {
+  font-size: 16px;
+  line-height: 1.5;
+  /* margin-bottom: 200px; */
+}
+.profile-info1{
+margin-left: 5px;
+text-align: center;
+margin-top:-50px ;
+}
+
+.about-right {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-right h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-right p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  padding: 40px;
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.profile-img img {
+  width: 350px;
+  
+}
+
+.profile-info {
+  max-width: 500px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.ability .skill {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.label span {
+  font-size: 12px;
+  color: gray;
+  margin-left: 8px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: #000;
+}
+
+.fill-90 { width: 90%; }
+.fill-75 { width: 75%; }
+.fill-95 { width: 95%; }
+.fill-80 { width: 80%; }
+
+.character ul {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.character li {
+  font-size: 14px;
+}
+
+.character li span {
+  display: block;
+  font-size: 11px;
+  color: gray;
+}

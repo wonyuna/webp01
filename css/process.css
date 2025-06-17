@@ -1,0 +1,156 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    background: linear-gradient( to bottom, rgba(255, 107, 66, 0.4), transparent 60%);
+    /* background-color: #f2f2f2; */
+    background-color: #fadacf;
+    height:100vh;
+    line-height: 1.6;
+    height: 100vh;
+    width:100%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+     
+      transition: background 0.3s ease;
+    
+      
+    }
+  header {
+    text-align: center;
+    padding: 80px 20px 40px;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display',sans-serif;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .process {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .step {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion {
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  .accordion:hover {
+    background-color: #f8cabb;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #ffeee8;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg);
+    z-index: 999;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /*  box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    /* font-family: 'Playfair Display', serif; */
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .navbar .logo img{
+    width:180px;
+    height:80px;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin-left: 600px;
+  
+  }
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    /* color: #fbae95; */
+    color: #ff3842;
+  }
+/*   .footer {
+    background: #fadcd2;
+    position: relative;
+    color: #000000;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    height: 100px;
+  } */
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;     
+    height: 80px;   
+    background-color: #fadcd2;
+    text-align: center;
+    line-height: 80px;  /* 가운데 정렬용 */
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.1); /* 선택사항: 위쪽 그림자 */
+  }
+  
